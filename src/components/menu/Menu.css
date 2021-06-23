@@ -1,0 +1,7 @@
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+    background: #e4e4fc;
+    align-items: center;
+}
