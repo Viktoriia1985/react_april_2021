@@ -17,11 +17,16 @@ useEffect(() => {
 
 
       return (
-         <div>
+         <div className="wrap">
 
              {postsList
-                 .map(value => <div> {value.userId} {value.id}
-                     {value.title} {value.body}</div>)
+                 .map(value => <div>
+                     <br/>
+                     postsId - {value.userId} <br/>
+                     id - {value.id} <br/>
+                     title - {value.title} <br/>
+                     body - {value.body} <br/>
+                 </div>)
              }
 
          </div>
