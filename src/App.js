@@ -7,8 +7,9 @@ import Post from "./components/post/Post";
 
      return (
          <div>
-             <Posts/>
-             <Post/>
+             <Posts>
+             <Post items={post}/>
+             </Posts>
          </div>
      );
  }
