@@ -6,12 +6,10 @@
       let [users, setUsers] = useState([]);
 
       useEffect(() => {
-
           getUsers().then(response => {
               setUsers(response);
               console.log(response);
           });
-
       }, []);
 
 
