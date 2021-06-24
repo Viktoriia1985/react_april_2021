@@ -1,5 +1,6 @@
 import './App.css'
-import Posts from "./components/Posts";
+import Posts from "./components/posts/Posts";
+import Post from "./components/post/Post";
 
 
   function App() {
@@ -7,6 +8,7 @@ import Posts from "./components/Posts";
      return (
          <div>
              <Posts/>
+             <Post/>
          </div>
      );
  }
