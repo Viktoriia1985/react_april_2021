@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /.idea/
+/.idea/dbnavigator.xml
 
 package-lock.json
 
