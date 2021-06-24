@@ -1,37 +1,27 @@
-import './Posts.css';
- import {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
+import Post from "../post/Post";
 
 export default function Posts() {
 
- let [postsList, setPostsList] = useState([]);
+    const [postsList, setPostsList] = useState([]);
 
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(value => value.json())
+            .then(response => {
+                console.log(response);
+                setPostsList(response);
+            });
+    }, []);
 
-useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(value => value.json())
-        .then(response => {
-            console.log(response);
-            setPostsList(response);
-        });
-}, []);
-
-
-      return (
-         <div className="wrap">
-
-             {postsList
-                 .map(value => <div>
-                     <br/>
-                     postsId - {value.userId} <br/>
-                     id - {value.id} <br/>
-                     title - {value.title} <br/>
-                     body - {value.body} <br/>
-                 </div>)
-             }
-
-         </div>
-     );
- }
+    return (
+        <div>
+            {
+                postsList.map(mainValue => <Post value={mainValue}/>)
+            }
+        </div>
+    );
+}
 
 
 

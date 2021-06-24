@@ -1,3 +1,9 @@
-.wrap {
-    display: flex;
+.wrap1 {
+    background-color: #207ee3 !important;
+    margin: 50px;
+    padding: 10px;
+}
+.wrap2 {
+    background-color: #b5ef6d;
+    padding: 10px;
 }

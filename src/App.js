@@ -1,18 +1,19 @@
-import './App.css'
 import Posts from "./components/posts/Posts";
-import Post from "./components/post/Post";
+import './App.css';
 
+function App() {
 
-  function App() {
+    return (
+        <div className="wrap2">
+            <Posts/>
+            <p className="wrap1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
+                doloribus esse, et exercitationem illum impedit iure magni minus molestias nostrum
+                officia possimus quasi recusandae, repellendus, suscipit temporibus
+                voluptates. Labore!</p>
+        </div>
+    );
+}
 
-     return (
-         <div>
-             <Posts>
-             <Post items={post}/>
-             </Posts>
-         </div>
-     );
- }
- export default App;
+export default App;
 
 
