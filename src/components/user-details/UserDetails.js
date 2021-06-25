@@ -3,10 +3,11 @@ export default function UserDetails({item}) {
     return (
         <div>
 
+
             {
                 <div>
                     {item.username},
-                    <br />
+                    <br/>
                     {item.name},
                     <br/>
                     {item.email}
@@ -14,7 +15,5 @@ export default function UserDetails({item}) {
 
             }
 
-        </div>
-    );
-}
-
+        </div>)
+};
