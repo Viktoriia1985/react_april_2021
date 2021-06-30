@@ -3,12 +3,9 @@ import {getPosts, getPost} from './services/API';
 import Posts from "./components/posts/Posts";
 import PostDetails from "./components/postDetails/PostDetails";
 
-
 export default function App() {
-
-    let [posts, setPosts] = useState([]);
-    let [postDetails, setPostDetails] = useState(null);
-
+    const [posts, setPosts] = useState([]);
+    const [postDetails, setPostDetails] = useState(null);
 
     useEffect(() => {
         getPosts().then(response => {
