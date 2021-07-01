@@ -1,14 +1,35 @@
- import {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
+import {getPosts, getPost} from './services/API';
+import Posts from "./components/posts/Posts";
+import PostDetails from "./components/postDetails/PostDetails";
 
-  function App() {
+export default function App() {
+    const [posts, setPosts] = useState([]);
+    const [postDetails, setPostDetails] = useState(null);
 
-     return (
-         <div>
+    useEffect(() => {
+        getPosts().then(response => {
+            setPosts(response.data);
+        });
+    }, []);
+
+    function selectPost(id) {
+        console.log(id);
+        getPost(id).then(({data}) => {
+            setPostDetails(data);
+            console.log(data);
+        });
+    }
 
 
-         </div>
-     );
- }
- export default App;
-
+    return (
+        <div>
+            <Posts items={posts} selectPost={selectPost}/>
+            <hr/>
+            {
+                postDetails && <PostDetails item={postDetails}/>
+            }
+        </div>
+    );
+}
 
