@@ -6,7 +6,7 @@ export default function Post(props) {
             -
             <button onClick={() => {
                 selectPost(item.id)
-            }}>click me</button>
+            }}>post</button>
         </div>
     );
 }
