@@ -18,14 +18,18 @@ export default function App() {
                     }}/>
 
                     <Route exact path={'/users'} component={Users}/>
+                    <Route exact path={'/posts'} component={Posts}/>
 
                     <Route path={'/users/:id/posts'} render={(({match: {params: {id}}}) => {
-                        return <Posts {...props}/>
+                        return <Posts id={id}/>
                     })}/>
 
-                    <Route path={'/comments'}>
-                        <Comments/>
-                    </Route>
+                    <Route exact path={'/comments'} component={Comments}/>
+
+                    <Route path={'/posts/:id/comments'} render={(({match: {params: {id}}}) => {
+                        return <Comments id={id}/>
+                    })}/>>
+
                 </Switch>
 
             </div>
