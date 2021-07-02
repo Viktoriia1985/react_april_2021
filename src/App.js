@@ -2,11 +2,12 @@ import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import Posts from "./components/posts/Posts";
 import Comments from "./components/comments/Comments";
 import Users from "./components/users/Users";
+import './App.css'
 
 export default function App() {
     return (
         <Router>
-            <div>
+            <div className="wrap1">
                 <div><Link to="/">home page</Link></div>
                 <div><Link to="/users">users page</Link></div>
                 <div><Link to="/posts">posts page</Link></div>

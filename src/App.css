@@ -1,0 +1,7 @@
+.wrap1 {
+    display: flow-root;
+    background-color: #f3f0ff !important;
+    text-align: justify;
+    margin: 2px;
+    padding: 10px;
+}
