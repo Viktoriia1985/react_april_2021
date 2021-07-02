@@ -1,14 +1,21 @@
- import {useState, useEffect} from 'react';
+import A from "./components/A";
+import {MyContext} from "./index";
 
-  function App() {
+export default function App() {
+    const x = 'ho-ho';
+    let y = {name: 'Hello OKten'};
+    return (
 
-     return (
-         <div>
+        <MyContext.Provider value={y}>
+            <div>
 
+                <A x={x}/>
 
-         </div>
-     );
- }
- export default App;
+            </div>
+        </MyContext.Provider>
+
+    );
+}
+
 
 
