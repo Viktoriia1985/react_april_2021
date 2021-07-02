@@ -28,8 +28,7 @@ export default function App() {
 
                     <Route path={'/posts/:id/comments'} render={(({match: {params: {id}}}) => {
                         return <Comments id={id}/>
-                    })}/>>
-
+                    })}/>
                 </Switch>
 
             </div>
