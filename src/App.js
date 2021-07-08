@@ -71,7 +71,8 @@ export default function App() {
 
             <div>
                 <button onClick={() => {
-                    dispatch({type: 'INC_CUSTOM', payload: 123})
+
+                    dispatch({type: 'INC_CUSTOM', payload: 3})
                 }}>custom
                 </button>
             </div>

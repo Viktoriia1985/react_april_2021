@@ -10,9 +10,9 @@ import {Provider} from 'react-redux';
 const initialState = {
     counterValue: 0
 };
-const counterReducer = (state = initialState, action, payload) => {
+const counterReducer = (state = initialState, action) => {
     // console.log({action, state})
-    console.log({payload})
+
 
     switch (action.type) {
         case 'INC': {
@@ -25,7 +25,8 @@ const counterReducer = (state = initialState, action, payload) => {
             return {...state, counterValue: 0};
         }
         case 'INC_CUSTOM': {
-            return {...state, posts: action.payload};
+            console.log(action.payload)
+            return {...state, counterValue: state.counterValue + action.payload};
         }
         default:
             return state;
