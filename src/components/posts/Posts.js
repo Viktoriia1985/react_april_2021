@@ -8,11 +8,11 @@ export default function Posts() {
 
     const fetchPosts = async () => {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-        const postData = await response.json();
+        const postsData = await response.json();
 
         dispatch({
             type: 'SET_POSTS',
-            payload: postData
+            payload: postsData
         })
     }
 
