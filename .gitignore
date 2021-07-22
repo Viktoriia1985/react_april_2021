@@ -6,7 +6,7 @@
 .pnp.js
 /.idea/
 /.idea/dbnavigator.xml
-
+/test
 package-lock.json
 
 # testing

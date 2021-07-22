@@ -1,0 +1,7 @@
+export const ADD_TODOS = 'ADD_TODOS'
+export const IS_LOADING_TRUE = 'IS_LOADING_TRUE'
+export const IS_LOADING_FALSE = 'IS_LOADING_FALSE'
+export const PUSH_NEW_TODO = 'PUSH_NEW_TODO'
+export const DELETE_TODO = 'DELETE_TODO'
+export const CHANGE_STATUS = 'CHANGE_STATUS'
+

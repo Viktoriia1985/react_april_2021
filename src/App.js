@@ -1,14 +1,19 @@
- import {useState, useEffect} from 'react';
+import './App.css';
 
-  function App() {
+import {CreateTodoForm} from "./components/createTodoForm";
+import TodosList from "./components/TodosList";
 
-     return (
-         <div>
+function App() {
+    return (
+        <div>
+            <CreateTodoForm/>
+            <TodosList/>
+        </div>)
+}
+
+export default App;
 
 
-         </div>
-     );
- }
- export default App;
+
 
 
